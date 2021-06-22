@@ -14,7 +14,7 @@ When fully loaded it should look like this:
 
 ## How this works
 
-![data_pipeline](images/pipeline_overview.png)
+![data_pipeline](images/pipeline_overview_v2.png)
 
 1. Data is extracted as JSON from the TFL APIs. Care is taken to ensure it's in new line delimited JSON format. This is so that later on each line can be read into DataFlow as treated as a separate object to enable parrallel processes of the TFL crowding data.
 2. The extracted data is stored on Cloud Storage, which acts as a data lake for this project.

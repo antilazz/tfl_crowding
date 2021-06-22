@@ -1,5 +1,4 @@
 # Beat the crowds on the London underground network
-======================================
 
 ## Avoid crowds on the London underground using data from the TFL API
 
@@ -11,7 +10,7 @@ You can access the dashboard here: https://bit.ly/3vIuR79
 
 When fully loaded it should look like this: 
 
-![dashboard_demo](iamges/dashboard_screenshot.png)
+![dashboard_demo](images/dashboard_screenshot.png)
 
 ## How this works
 

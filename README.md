@@ -19,7 +19,7 @@ You can access the dashboard here: https://bit.ly/3vIuR79
 
 When fully loaded it should look like this: 
 
-![dashboard_demo](images/dashboard_screenshot.png)
+![dashboard_demo](images/dashboard_screenshot_v2.png)
 
 ## How this works
 
@@ -29,11 +29,14 @@ When fully loaded it should look like this:
 
     * Care is taken to ensure it's in new line delimited JSON format. This is so that later on each line can be read into DataFlow as treated as a separate object to enable parrallel processes of the TFL crowding data.
 2. The extracted data is stored on Cloud Storage, which acts as a data lake for this project.
-3. BigQuery, actiing as the data warehouse for this project, has tables configured to house the cleaned up data
-4. Dataflow pipeslines are used to
+3. BigQuery, acting as the data warehouse for this project, has tables configured to house the cleaned up data
+4. Dataflow pipelines are used to
 
     *  Extract JSON from cloud stroage
     *  Transform the data in the JSON objects into the schema needed
     *  Load the cleaned data into the BigQuery tables from #3 
 
 5. A DataStudio dashboard was created to read the newly created BigQuery tables
+
+    *  The TFL API provided crowding measurements every 15 mins, but this volume of data was too much for DataStudio to handle.
+    *  A custom query was written in BigQuery to truncate the original dataset down to a single measurement every hour. Through this the final data set was reduced to the point where DataStudio could handle it whilst still giving the needed insights to users.

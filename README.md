@@ -19,7 +19,7 @@ You can access the dashboard here: https://bit.ly/3vIuR79
 
 When fully loaded it should look like this: 
 
-![dashboard_demo](images/dashboard_screenshot_v2.png)
+![dashboard_demo](images/dashboard_screenshot_v3.png)
 
 ## How this works
 
